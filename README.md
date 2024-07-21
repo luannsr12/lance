@@ -8,18 +8,18 @@
  composer require luannsr12/lance
 ```
 
-#### Listar os torneios
+#### Listar os campeonatos
  
 ```php
 <?php 
 
     require_once 'vendor/autoload.php';
 
-    use Lance\Sofascore\Torneios;
+    use Lance\Sofascore\Tournament;
 
-    $torneios = new Torneios();
+    $tournament = new Tournament();
 
-    $list = $torneios->list();
+    $list = $tournament->list();
 
     echo '<pre>';
     var_dump($list);
@@ -33,11 +33,11 @@
 
     require_once 'vendor/autoload.php';
 
-    use Lance\Sofascore\Torneios;
+    use Lance\Sofascore\Tournament;
 
-    $torneios = new Torneios();
+    $tournament = new Tournament();
 
-    $search = $torneios->search("Brasileirão Série A");
+    $search = $tournament->search("Brasileirão Série A");
 
     echo '<pre>';
     var_dump($search);
@@ -51,32 +51,22 @@
 
     require_once 'vendor/autoload.php';
 
-    use Lance\Sofascore\Torneios;
+    use Lance\Sofascore\Tournament;
 
-    $torneios = new Torneios();
+    $tournament = new Tournament();
 
-    $result = $torneios->get(325); // get by id
+    $campeonato = $tournament->get(7); // id torneio / id temporada
 
-    echo '<pre>';
-    var_dump($result);
+    $logo = $campeonato->getLogo(); // logo campeonato
+    $name = $campeonato->getName(); // nome campeonato
+    $slug = $campeonato->getSlug(); // slug campeonato
+    $color = $campeonato->getColors(); // cor primaria e secondaria (object)->primary, (object)->secondary
+    $current_champion = $campeonato->getCurrentChampion(); // Atual campeão
+    $seasons = $campeonato->getSeasons(); // todas as temporadas
+    $teams = $campeonato->getTeams(); // todos os clubes participantes. Caso não tenha resultado, retorna clubes da temprada anterior
+    $all_data = $campeonato->tournament; // todos os dados do campenato
 
-```
 
-#### Logo do torneio
-
-```php
-<?php 
-
-    require_once 'vendor/autoload.php';
-
-    use Lance\Sofascore\Torneios;
-
-    $torneios = new Torneios();
-
-    $result = $torneios->getLogo(325); // get logo by id
-
-    if($result !== NULL){
-        echo "<img src='{$result}' />";
-    }
+    echo "<img src='{$logo}' />";
 
 ```
