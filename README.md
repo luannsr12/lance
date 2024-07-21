@@ -26,7 +26,7 @@
 
 ```
 
-#### Procurar torneio por nome
+#### Procurar campeonato por nome
 
 ```php
 <?php 
@@ -44,7 +44,7 @@
 
 ```
 
-#### Recuperar torneio pelo 'id'
+#### Recuperar campeonato pelo 'id'
 
 ```php
 <?php 
@@ -55,7 +55,7 @@
 
     $tournament = new Tournament();
 
-    $campeonato = $tournament->get(7); // id torneio / id temporada
+    $campeonato = $tournament->get(7); // id campeonato / id temporada
 
     $logo = $campeonato->getLogo(); // logo campeonato
     $name = $campeonato->getName(); // nome campeonato
