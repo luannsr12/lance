@@ -1,0 +1,19 @@
+{
+    "name": "luannsr12/lance",
+    "description": "SDK Futebol Sofascore",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lance\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luannsr12"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}
