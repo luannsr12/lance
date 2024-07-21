@@ -11,7 +11,7 @@
 #### Listar os torneios
  
 ```php
-    <?php 
+<?php 
 
     require_once 'vendor/autoload.php';
 
@@ -29,7 +29,7 @@
 #### Procurar torneio por nome
 
 ```php
-    <?php 
+<?php 
 
     require_once 'vendor/autoload.php';
 
@@ -47,7 +47,7 @@
 #### Recuperar torneio pelo 'id'
 
 ```php
-    <?php 
+<?php 
 
     require_once 'vendor/autoload.php';
 
@@ -65,7 +65,7 @@
 #### Logo do torneio
 
 ```php
-    <?php 
+<?php 
 
     require_once 'vendor/autoload.php';
 
